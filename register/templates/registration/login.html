@@ -9,8 +9,8 @@ Login Here
 {% block content %}
 <form method="POST" class="form-group">
     {% csrf_token %}
-    {{form}}
-    <button type="sbumit" class="btn btn-success">Login</button>
+    {{ form|crispy }}
     <p>Don't have an account? Create one <a href="/register">here</a></p>
+    <button type="submit" class="btn btn-success">Login</button>
 </form>
 {% endblock %}
